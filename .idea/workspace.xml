@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d1cf27f-f99d-4c66-ba5b-8ef88e57b639" name="Default Changelist" comment="" />
+    <list default="true" id="6d1cf27f-f99d-4c66-ba5b-8ef88e57b639" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AWSenv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/detailedDeployFlow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dockercompose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dockervolumecommand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/productionDockerfile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/travisworkflow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Udemy Devops Course.md" beforeDir="false" afterPath="$PROJECT_DIR$/Udemy Devops Course.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="JdfQmIXR" />
   </component>
   <component name="ProjectId" id="1Wb0otCRp03sWqsJWxzuUfiTQu6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -18,7 +34,9 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -86,12 +104,16 @@
       <workItem from="1579473918991" duration="6536000" />
       <workItem from="1579481741153" duration="563000" />
       <workItem from="1579482328382" duration="189000" />
-      <workItem from="1579482528565" duration="5899000" />
+      <workItem from="1579482528565" duration="15163000" />
+      <workItem from="1579740612183" duration="254000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="202" key="#Inspections" timestamp="1579482146644">
