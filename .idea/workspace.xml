@@ -2,13 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d1cf27f-f99d-4c66-ba5b-8ef88e57b639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AWSenv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detailedDeployFlow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dockercompose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dockervolumecommand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/productionDockerfile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travisworkflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/api/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/api/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/api/keys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/api/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/nginx/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/Fib.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/OtherPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/client/src/registerServiceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/nginx/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/nginx/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/nginx/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/nginx/proddefault.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/worker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/worker/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/worker/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/worker/keys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexApp/worker/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complexappstructure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/declerativedeploymentonkubernetes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/declerativevsimperative.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploymentworkflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/detailednodeport.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imperativedeployment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/importantnotesonkubernetes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes/client-node-port.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetes/client-pod.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kubernetesdeploymenttypes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kuberneteshierarchy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multicontainerdeployflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodeport.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pod_deployment_relation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/podimmutability.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/podstructure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/podsvsdeployments.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicesandpods.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/updatingpods.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Udemy Devops Course.md" beforeDir="false" afterPath="$PROJECT_DIR$/Udemy Devops Course.md" afterDir="false" />
     </list>
@@ -38,20 +88,38 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="MarkdownNavigator.Settings.Preview" />
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/complexApp/nginx" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.complexApp: Compose Deployment">
+    <configuration name="complexApp: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="complexApp/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="snake-image/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -72,6 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.complexApp: Compose Deployment" />
         <item itemvalue="npm.start" />
         <item itemvalue="Docker.snake-image/Dockerfile" />
       </list>
@@ -82,7 +151,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -105,7 +179,10 @@
       <workItem from="1579481741153" duration="563000" />
       <workItem from="1579482328382" duration="189000" />
       <workItem from="1579482528565" duration="15163000" />
-      <workItem from="1579740612183" duration="254000" />
+      <workItem from="1579740612183" duration="4846000" />
+      <workItem from="1579799759666" duration="2885000" />
+      <workItem from="1579809951654" duration="14090000" />
+      <workItem from="1579857214805" duration="7612000" />
     </task>
     <servers />
   </component>
@@ -124,14 +201,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579475457624" />
-    <state x="565" y="336" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579474643614">
+    <state x="565" y="336" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579748056915">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="565" y="336" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579474643614" />
+    <state x="565" y="336" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579748056915" />
+    <state x="423" y="86" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1579814571909">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="423" y="86" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579814571909" />
     <state x="528" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579403172313">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="528" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579403172313" />
+    <state x="525" y="230" key="#complexApp:_Compose_Deployment" timestamp="1579814604482">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="525" y="230" key="#complexApp:_Compose_Deployment/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579814604482" />
     <state x="530" y="96" key="#redis-image/Dockerfile" timestamp="1579408197106">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -140,6 +225,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="530" y="108" key="#snake-image/Dockerfile/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579408635393" />
+    <state x="575" y="342" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1579813901580">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="575" y="342" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579813901580" />
     <state width="1638" height="251" key="GridCell.Tab.0.bottom" timestamp="1579477829077">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -156,10 +245,17 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579477829076" />
-    <state x="341" y="175" key="SettingsEditor" timestamp="1579482514323">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="520" y="233" key="SettingsEditor" timestamp="1579857331457">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579482514323" />
+    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579808847422" />
+    <state x="520" y="233" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1579857331457" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1" timestamp="1579892681667">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579892681667" />
+    <state x="0" y="0" width="838" height="1050" key="dock-window-1/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579884302539" />
+    <state x="1395" y="739" width="1152" height="701" key="dock-window-1/0.23.2560.1417@0.23.2560.1417" timestamp="1579857332343" />
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579475454369">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

@@ -1,0 +1,40 @@
+{
+  "AWSEBDockerrunVersion" 2,
+  "containerDefinitions": [
+    {
+      "name": "client",
+      "image": "armangurkan1/multi-docker-client",
+      "hostname": "client",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "api",
+      "image": "armangurkan1/multi-docker-api",
+      "hostname": "api",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "worker",
+      "image": "armangurkan1/multi-docker-worker",
+      "hostname": "worker",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "nginx",
+      "image": "armangurkan1/multi-docker-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["client", "api"],
+      "memory": 128
+    }
+  ]
+}

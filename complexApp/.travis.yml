@@ -1,0 +1,34 @@
+#all the travis commands would require super user permissions to be executed.
+sudo: required
+services:
+  # declare docker usage
+  - docker
+before_install:
+  # the tagname defined after -t can be anyting best practice is to name it dockerusername/repoName
+  - docker build -t armangurkan1/multi-client -f ./client/Dockerfile.dev ./client
+script:
+  - docker run -e CI=true armangurkan1/multi-client npm run test
+after_success:
+  - docker build -t armangurkan1/multi-docker-client ./client
+  - docker build -t armangurkan1/multi-docker-nginx ./nginx
+  - docker build -t armangurkan1/multi-docker-api ./api
+  - docker build -t armangurkan1/multi-docker-worker ./worker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push armangurkan1/multi-docker-client
+  - docker push armangurkan1/multi-docker-nginx
+  - docker push armangurkan1/multi-docker-api
+  - docker push armangurkan1/multi-docker-worker
+deploy:
+  edge: true
+  # already defined in Travis CI
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: multi-docker
+  env: MultiDocker-env
+  #when you get elasticbeanstalk you get S3 bucket automatically, find it
+  bucket_name: elasticbeanstalk-us-east-2-752217181739
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
