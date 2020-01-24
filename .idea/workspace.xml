@@ -2,65 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d1cf27f-f99d-4c66-ba5b-8ef88e57b639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/api/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/api/Dockerfile.dev" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/api/keys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/api/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/Dockerfile.dev" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/nginx/default.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/Fib.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/OtherPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/client/src/registerServiceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/nginx/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/nginx/Dockerfile.dev" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/nginx/default.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/nginx/proddefault.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/worker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/worker/Dockerfile.dev" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/worker/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/worker/keys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexApp/worker/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/complexappstructure.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/declerativedeploymentonkubernetes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/declerativevsimperative.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploymentworkflow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detailednodeport.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imperativedeployment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/importantnotesonkubernetes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kubernetes/client-node-port.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kubernetes/client-pod.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kubernetesdeploymenttypes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kuberneteshierarchy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multicontainerdeployflow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodeport.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pod_deployment_relation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/podimmutability.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/podstructure.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/podsvsdeployments.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicesandpods.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/updatingpods.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Udemy Devops Course.md" beforeDir="false" afterPath="$PROJECT_DIR$/Udemy Devops Course.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +124,7 @@
       <workItem from="1579740612183" duration="4846000" />
       <workItem from="1579799759666" duration="2885000" />
       <workItem from="1579809951654" duration="14090000" />
-      <workItem from="1579857214805" duration="7612000" />
+      <workItem from="1579857214805" duration="8124000" />
     </task>
     <servers />
   </component>
