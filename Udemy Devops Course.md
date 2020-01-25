@@ -79,18 +79,18 @@ _** First ./ is for the current directory PATH, the second ./ is the container P
 - `docker-compose up -d` d flag is for detach.
 - `docker-compose down` stops all the running containers.
 - Also docker-compose.yml file should be constructed, pls [visit docker-compose.yml](visits/docker-compose.yml)
-####Docker docker-compose.yml Configuration:
+#### Docker docker-compose.yml Configuration:
 - Server names, ports, images, if no images build paths, and restart policies etc. can be defined.
-#####Restart Policies:
+##### Restart Policies:
 ![composeymlrestartoptions](composeymlrestartoptions.png)
-#####Container Status Check:
+##### Container Status Check:
 - `docker-compose ps` same thing as `docker ps`
     - major difference is `docker-compose ps` has to be ran on the same directory as the docker-compose.yml file
     , `docker ps` does not.
-###Deploying to Production
+### Deploying to Production
 It actually requires a workflow as a best practice:
 ![dockerworkflow](dockerworkflow.png)
-####Setting Up Dockerfiles:
+#### Setting Up Dockerfiles:
 - We should have two Dockerfiles, one for development and one for production.
     - Dockerfile.dev
         ````
@@ -109,7 +109,7 @@ It actually requires a workflow as a best practice:
 
     - [Dockerfile (production Docker file)](#creating-a-production-container)
 
-####HotStartReload on Docker Containers
+#### HotStartReload on Docker Containers<a name="dockervolume"></a>
 - After `Docker run` command we bind the local files to the container with `-v` flag and create references to the
  directories in the container to the directories in the local machine.  `-v` flag stands for Docker Volumes.
   - Docker volumes are kind of file system entities that mirror local files.
@@ -117,7 +117,7 @@ It actually requires a workflow as a best practice:
   ![dockervolume](dockervolumecommand.png)
   ![dockercomposeVol](dockercompose.png)
 
-####Running Tests On Docker Container
+#### Running Tests On Docker Container
 - tests can be run via the command declared in the package.json if it is a react project for example.
     - For example
     - After running ``docker-compose up -d``
@@ -233,7 +233,7 @@ This is the app structure of the app to be created:
 ### Deployment of MultiContainer Projects
 ![multicontainerdeployflow](multicontainerdeployflow.png)
 
-https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definitions
+<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definitions>
 - To connect different services within AWS, you have to do it in security group settings in AWS menu and enable any
  request to be received within my VPC (virtual private cloud).  It can be too but it can't be as a different
   container in elastic beanstalk.
@@ -290,11 +290,91 @@ https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_para
 > **Deployment:** Maintains a set of identical pods, ensuring that they have the correct config and that the right number exists
 - This is the difference between Pods and Deployments: ![podsvsdeployments](podsvsdeployments.png)
 - How are **pods** and **deployments** relate to each other: ![poddeploymentrelation](pod_deployment_relation.png)
-### Deployment Config Files In Detail
-- 
-### Applying a deployment
+- How **pods** and **deployments** find each other via component and label tags: ![howdeploymentreachpod](howdeploymentreachpod.png)
+## Applying a Deployment
+- Before we start creating pods via deployments we would like to delete manually created pods (usually), and this is the command: `kubectl delete -f <configfileofPod>`
+    - This deletion is an imperative command.
+- To create a new pod with Deployment Object: `kubectl apply -f <client-deployment.yaml`.
+- This is the structure of communication after creating a Pod Object using a Deployment Object. ![communicationoutlinepods](communicationoutlinepods.png)
+- To get detailed info about pods: `kubectl get pods -o wide`, we can see the IP Address of the pod assigned by Kubernetes Env.
 ### Scaling and Changing Deployments
+- You can do it by changing the deployment yaml file, if you change the `replicas` value, the number of running **pods** are going to be changed.
 ### Updating and Rebuilding Images
-### Triggering Deployment Updates and Imperative Strategies
+#### Triggering Deployment Updates and Imperative Strategies
+- These are the steps we are going to follow: ![UpdatingImagesForRunningPods](UpdatingImagesForRunningPods.png)
+    1. First we go to the source code and change the code.
+    2. Then we take another image by running `docker run build <username>/<servicename>:v1 .` command. Version number is randomly given it can be anything. **Remember images are not being created by Kubernetes, it is created by Docker.**
+    3. Then, we upload it to **Docker Hub** `docker push <username>/<servicename>:v1` **Remember Kubernetes is feeded the Images by Docker Hub**
+    4. Then, we update image property of the client-deployment.yaml `kubectl set image deployment/client-deployment client=stephengrider/multi-client:v1`
+        1. So, it is: `kubectl set image deployment/<filename> <conatinerName>=<imagename {username/imageName}>:<version>`
+
 ### Multiple Docker Installations and Reconfiguring Docker CLI
-- 
+Here is a review of how the Kubernetes Uploading (specificly used that term so you do not mix a deployment with Deployment Object):
+![kubernetesflowrevisit](kubernetesflowrevisit.png)
+![#reviewkubernetesdepflow](reviewkubernetesdepflow.png)<a name='reviewkubernetesdepflow'></a>
+- There are two Docker Servers running one for local computer, one in Kubernetes Node (Virtual Machine).
+- Our docker-client in our local machine can be configured to either communicate with the Docker Server in the Virtual Machine and/or my local machine.
+- The docker-client in the VM is only reserved for taking orders from Kubernetes Master through **kubectl**.
+- if you are using **minikube** the command to reconfigure your local docker-client to talk to Docker Server in the Kubernetes VM is: `eval $(minikube docker-env)`
+    - This would only applicable for the terminal instance as long as that terminal session.
+-  
+
+## Multi Container App with Kubernetes
+This is going to be the structrue:
+![complexappwithkubernetes](complexappwithkubernetes.png)
+##### Steps:
+1. Create config files for each service and deployment
+2. Test locally
+3. Create a Github/Travis flow to build images and deploy
+4. Deploy app to a cloud provider.
+#### ClusterIP Object
+- Cluster IP Object is only to be used from Deployment Objects to reach other Deployment Objects ![clusterIp](clusterIP.png)
+- We are going to create a yaml file for every single Service Object and Deployment Object that is shown above in [multi container structure](#reviewkubernetesdepflow)
+    - You can actually make one file, but everything we write to different yaml files have to be seperated by `---` but it would be really messy.
+#### Persistent Volume Claim for Postgres
+- Volume refers to the Object that enables to share the filesystem of the host and the container vm; kind of a reference to the filesystem of the host. (See: [docker volumes](#dockervolume))
+- Current Situation of the PostGres Structure:  The reason we need a postgres container is that if the Deployment crashes **we would loose all the db**.
+    ![postgresDeploy_postgresVolume](postgresDeploy_postgresVolume.png)
+- When we point a reference to the volume, it would reference the same volume when a new one is started.
+- <strong>Very important to know that the number of DB Deployments can only be one because they would be reaching the same database, or else they would collide.  If we want to increase DB Container availability we need to do much more advanced configurations such as PVCs sharded with sharded DBs </strong>
+#### Detailed Look On Volumes
+##### Kubernetes Volumes
+- Kubernetes Volumes are Objects, so in this case the __Volume__ we are referring to are not a generic volume, but a __Persistent Volume Claim__ and a __Persistent Volume__ .
+![volume](volumedefinition.png)
+- On the other hand the the __Kubernetes Volume Object__ Structure can be seen below. This object type is not suitable for hosting DBs but instantiate db information on the Pod Level.
+    ![volumeobject](volumeobject.png)
+#### Persistent Volume Claim & Persistent Volume
+   ![volume_vs_pv](volume_vs_pv.png)
+##### Persistent Volume vs Persistent Volume Claim
+[BEST EXAMPLE WATCH THIS](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11582334?start=64#bookmarks)
+- Persistent Volume
+    : This is the actual hard drive that will be made available on a __Persistent Volume Claim__.
+- Persistent Volume Claim
+    : Are the list of options you can claim of __Persistent Volumes__.
+    If the volume is created on a request it would be called __Dynamically Created Persistent Volume__, if it was a PV that was explicitly created before it is called __Statically Created Persistent Volume__.
+##### Access Modes
+We have defined a new parameter in the `database-persistent-volume-claim.yaml` __Access Modes__ (`accessModes: - ReadWriteOnce`).  Please refer to the definitions of the value:
+![readwriteonce](readwriteonce.png)
+##### Creation and Allocation of Persistent Volumes
+- When a claim is made to Kubernetes for a __Peristent Volume__ via the __Persistent Volume Object__ ([Please refer to the file](./complex/k8s/database-persistent-volume-claim.yaml)) yaml file Kubernetes allocates a portion of the available hard-drive to itself.
+##### Defining Environment Variables
+- Current environtment:
+  ![environmentk8s](environmentk8s.png)
+- The Environment Variables:
+    - Redis Host: is going to be the URL Path that __multi-worker__ reaches via a http
+    - Redis Port: the port that worker and server communicate with Redis, it is default 6379
+    - PGUSER: it is the username to authenticate postgres with
+    - PGHOST: it is the Service Name we defined in the yaml
+    - PGDATABASE: name of the database, which is postgres
+    - PGPORT: the port we get connect to PG Deployment object, the default port is 5432
+    - PGPASSWORD: the password to our postgres service we are going to define it at a different entity.
+##### Secret Environment Variables As an Object
+- Secret Object is created manually in every environment that the code is hosted.
+- Creating a __Secret Object__ is done like this: `kubectl create secret generic <secret_name> --from-literal key=value` or `kubectl create secret tls <secret_name> --from-literal key=value`
+    - `create`: is the imperative command
+    - `generic`: is the type of secret it can be `tls` or `docker-registry`
+    - `<secret_name>`: refers to the name of the secret as it is labelled or named in the Pod config file
+    - `--from-literal`: refers to the fact that we are going to add the secret information to the imperative command rather than a file.
+    - `key=value`: is the key and value of the secret. Ex:`PGPASSWORD=12345`
+- Since our images in Docker Hub, we do not need a docker-registry secret, we only need it if we are trying to get images from a docker-registry that is private.
+- We will be needing the TLS secret when we are configuring the traffic handling.

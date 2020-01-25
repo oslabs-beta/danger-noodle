@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d1cf27f-f99d-4c66-ba5b-8ef88e57b639" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/armangurkan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Udemy Devops Course.md" beforeDir="false" afterPath="$PROJECT_DIR$/Udemy Devops Course.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/concur_async.md" beforeDir="false" afterPath="$PROJECT_DIR$/concur_async.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/client-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/client-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readwriteonce.png" beforeDir="false" afterPath="$PROJECT_DIR$/readwriteonce.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +56,8 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="MarkdownNavigator.Settings.Preview" />
+    <property name="settings.editor.selected.configurable" value="MarkdownNavigator.Settings.Rendering" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -124,7 +135,7 @@
       <workItem from="1579740612183" duration="4846000" />
       <workItem from="1579799759666" duration="2885000" />
       <workItem from="1579809951654" duration="14090000" />
-      <workItem from="1579857214805" duration="8124000" />
+      <workItem from="1579857214805" duration="38105000" />
     </task>
     <servers />
   </component>
@@ -139,9 +150,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="440" y="202" key="#Inspections/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579482146644" />
-    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579475457624">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="208" y="-1362" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579917555807">
+      <screen x="-487" y="-1440" width="2560" height="1440" />
     </state>
+    <state x="208" y="-1362" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579917555807" />
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579475457624" />
     <state x="565" y="336" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579748056915">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -187,16 +199,24 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="251" key="GridCell.Tab.0.right/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579477829076" />
-    <state x="520" y="233" key="SettingsEditor" timestamp="1579857331457">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="748" y="-1004" width="500" height="202" key="MarkdownNavigator.TocOptionsRefactoringDialog" timestamp="1579930953947">
+      <screen x="-487" y="-1440" width="2560" height="1440" />
     </state>
+    <state x="748" y="-1004" width="500" height="202" key="MarkdownNavigator.TocOptionsRefactoringDialog/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579930953947" />
+    <state x="500" y="-1270" key="SettingsEditor" timestamp="1579931035263">
+      <screen x="-487" y="-1440" width="2560" height="1440" />
+    </state>
+    <state x="500" y="-1270" key="SettingsEditor/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579931035263" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579808847422" />
     <state x="520" y="233" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1579857331457" />
-    <state x="0" y="0" width="1680" height="1050" key="dock-window-1" timestamp="1579892681667">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1" timestamp="1579972898093">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579892681667" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579908406015" />
+    <state x="0" y="0" width="2560" height="1440" key="dock-window-1/0.0.2560.1440@0.0.2560.1440" timestamp="1579893887555" />
     <state x="0" y="0" width="838" height="1050" key="dock-window-1/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579884302539" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.23.1680.1027/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579972898093" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1579905236904" />
     <state x="1395" y="739" width="1152" height="701" key="dock-window-1/0.23.2560.1417@0.23.2560.1417" timestamp="1579857332343" />
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579475454369">
       <screen x="0" y="23" width="1680" height="1027" />
