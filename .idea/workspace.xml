@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d1cf27f-f99d-4c66-ba5b-8ef88e57b639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/armangurkan.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complex/k8s/ingress-service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/complex/k8s/kubernetes-dashboard.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/currentstates.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gloudingress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ingresscontrollerflow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ingresscontrollerstruct.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projectingress.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Udemy Devops Course.md" beforeDir="false" afterPath="$PROJECT_DIR$/Udemy Devops Course.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/concur_async.md" beforeDir="false" afterPath="$PROJECT_DIR$/concur_async.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes/client-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/client-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readwriteonce.png" beforeDir="false" afterPath="$PROJECT_DIR$/readwriteonce.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +133,7 @@
       <workItem from="1579740612183" duration="4846000" />
       <workItem from="1579799759666" duration="2885000" />
       <workItem from="1579809951654" duration="14090000" />
-      <workItem from="1579857214805" duration="38105000" />
+      <workItem from="1579857214805" duration="48477000" />
     </task>
     <servers />
   </component>
@@ -209,13 +207,18 @@
     <state x="500" y="-1270" key="SettingsEditor/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579931035263" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579808847422" />
     <state x="520" y="233" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1579857331457" />
-    <state x="0" y="0" width="1680" height="1050" key="dock-window-1" timestamp="1579972898093">
+    <state x="1145" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579997315457">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="1145" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1579997315457" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1" timestamp="1580002543945">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579908406015" />
+    <state x="0" y="0" width="1680" height="1050" maximized="true" key="dock-window-1/0.0.1680.1050/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579995030358" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.0.1680.1050@0.0.1680.1050" timestamp="1579997843020" />
     <state x="0" y="0" width="2560" height="1440" key="dock-window-1/0.0.2560.1440@0.0.2560.1440" timestamp="1579893887555" />
-    <state x="0" y="0" width="838" height="1050" key="dock-window-1/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1579884302539" />
-    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.23.1680.1027/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579972898093" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.23.1680.1027/-487.-1417.2560.1417@0.23.1680.1027" timestamp="1580002543945" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.23.1680.1027/-487.-1440.2560.1440@-487.-1440.2560.1440" timestamp="1579983202718" />
     <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1579905236904" />
     <state x="1395" y="739" width="1152" height="701" key="dock-window-1/0.23.2560.1417@0.23.2560.1417" timestamp="1579857332343" />
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579475454369">

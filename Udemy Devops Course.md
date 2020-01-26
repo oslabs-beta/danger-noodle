@@ -378,3 +378,34 @@ We have defined a new parameter in the `database-persistent-volume-claim.yaml` _
     - `key=value`: is the key and value of the secret. Ex:`PGPASSWORD=12345`
 - Since our images in Docker Hub, we do not need a docker-registry secret, we only need it if we are trying to get images from a docker-registry that is private.
 - We will be needing the TLS secret when we are configuring the traffic handling.
+#### Load Balancer Service Object Subset of Service Object:
+- Loadbalancer is the old way to handle traffic.
+    - Create a Load Balancer
+    - Send traffic to only one specific Deployment Object ONLY.
+    - Load Balancer also directs the cloud provider to initiate a load balancer itself.
+- Ingress is the new way to handle traffic.
+
+## HANDLING TRAFFIC WITH INGRESS
+> Very important Note:  
+>   The Ingress server we are using is github/com/kubernetes/ingress-nginx in KUBERNETES REPO  
+>   There is another Ingress Server called github.com/nginxinc/kubernetes-ingress in NGINX INC REPO  
+> THEY ARE DIFFERENT PRODUCTS
+
+#### Behind the Scenes in Ingress Server
+- This how we do things up until now:
+    ![currentstates.png](currentstates.png)
+- And the same logic and flow will be valid for Ingress Controller as well:
+    ![ingresscontrollerflow](ingresscontrollerflow.png)
+- In a detailed view:
+    - We are going to create an __Ingress Config__
+    - And that config file is going to create an Ingress Controller
+    - The Ingress Controller is going to be in charge of creating the entities that routes our traffic to Deployment Objects.
+    ![ingresscontrollerstruct](ingresscontrollerstruct.png)
+    - But in this project we are going to use the Nginx Ingress which will work like this for simplicity reasons:
+    ![projectingress](projectingress.png)
+    - Also in our Deployment we are going to use GCloud and the project structure is going to look like this:
+    ![gloudingress](gloudingress.png)
+- The reason we do not manually create a Load Balancer Object and Create A Ingress Controller Object is the fact that, there are many additional features for Ingress Servers do automatically rather than simple load balancing:
+    - A good example to that could be, achieving sticky sessions: which means user should be sending requests to same pod in a deployment object so that it interacts the state that it creates.
+- Ingress Controller should be added, NGNIX Ingress added from github/kubernetes.
+- Also, we created an ingress-service.yaml file but the kind of the object to be created by the yaml file is AN INGRESS, that creates ingress servers via ingress controller.
